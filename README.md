@@ -83,10 +83,10 @@ With that, with have a database with a star schema, where all tables are related
 Now we can create our dashboard using Power BI.
 
 ## Results Summary:
- If possible, include a brief summary of your key findings or conclusions. This gives readers a quick glimpse into what your analysis revealed.
+
 
 ## Visuals: 
- Mention if you have included any charts, graphs, or visualizations in your project. This can pique interest, especially for those more visually inclined.
+
 
 ## Future Work:
 

@@ -83,14 +83,13 @@ With that, with have a database with a star schema, where all tables are related
 Now we can create our dashboard using Power BI.
 
 ## Results Summary:
- If possible, include a brief summary of your key findings or conclusions. This gives readers a quick glimpse into what your analysis revealed.
 
 ## Visuals: 
- Mention if you have included any charts, graphs, or visualizations in your project. This can pique interest, especially for those more visually inclined.
 
 ## Future Work:
 
 For future work, we dive deeper into the data available from OPEC. For that I chose to take a look at oil products, things like gasoline and other crude oil fractions.
+
 
  #### Oil products (gasoline and other fractions):
 - Table 4.5 World output of petroleum products by country (1,000 b/d).xlsx
