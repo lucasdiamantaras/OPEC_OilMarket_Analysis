@@ -1,13 +1,17 @@
-## Oil Products data: 
+# Part 2: Oil Products/Derivates Global Market
 
-- Table 4.5 World output of petroleum products by country (1,000 b/d).xlsx
-- Table 5.3 World exports of petroleum products by country (1,000 b/d).xlsx
-- Table 7.6 Spot prices of petroleum products in major markets ($/b).xlsx
+## The Data
 
-- Table 4.6 Oil demand by main petroleum product in OPEC Members (1,000 b/d)
-- Table 4.8 World oil demand by main petroleum product and region (1,000 b/d)
-- Table 5.7 World imports of petroleum products by country (1,000 b/d)
-- Table 5.8 World imports of petroleum products by main petroleum product and region (1,000 b/d)
+The data was obtained from OPEC's database, available from their [website](https://asb.opec.org/data/ASB_Data.php).
+
+    - Table 4.5 World output of petroleum products by country (1,000 b/d).xlsx
+    - Table 5.3 World exports of petroleum products by country (1,000 b/d).xlsx
+    - Table 7.6 Spot prices of petroleum products in major markets ($/b).xlsx
+
+    - Table 4.6 Oil demand by main petroleum product in OPEC Members (1,000 b/d)
+    - Table 4.8 World oil demand by main petroleum product and region (1,000 b/d)
+    - Table 5.7 World imports of petroleum products by country (1,000 b/d)
+    - Table 5.8 World imports of petroleum products by main petroleum product and region (1,000 b/d)
 - Table 5.9 World imports of crude oil and petroleum products by country (1,000 b/d)
 
 ## More questions to look into:
