@@ -1,81 +1,114 @@
 # Crude Oil Global Market
 
 ## 1. About this project
-In this project I mainly use Power BI and to clean, manipulate,  and visualize data from the Petroleum Industry, obtained from OPEC (Organization of the Petroleum Exporting Countries).
+In this project I use Power BI and to clean, transform,  and visualize data from the Petroleum Industry. 
+<!-- I chose to work with a dataset that was related to subjects that interest me, such as the commodities markets and the chemical industry. Considering pretoleum and it derivates are commodities of high interest and also debate over the years, I felt the crude oil market was a great choice.-->
 
-I chose to work with a dataset that was related to a variety of subjects that interest me, such as international markets, historical analysis,  and bit of chemistry. Considering pretoleum and it derivates are commodities of high interest and debate over the years, I felt the oil market was a great choice.
-
-*Ultimately, this project's goal is to improve and demonstrate my skills as a aspiring Data Analyst.*
+*Ultimately, this project's goal is to work on and demonstrate my skills as a Data Analyst.*
 
 ## 2. The Data
 
-The data was obtained from OPEC's database, available from their [website](https://asb.opec.org/data/ASB_Data.php).
+The data was obtained from OPEC's (Organization of the Petroleum Exporting Countries) database, available from their [website](https://asb.opec.org/data/ASB_Data.php).
 
-*Obs: Although many countries are not part of OPEC, the datasets has records from mostly all countries that participate in the Oil Market.*
+From the available database I chose the following variables to work with:
+- Crude Oil Reserves
+- Crude Oil Output (production)
+- Crude Oil Demand
+- Crude Oil Spot Prices
 
-From the available database I chose the following tables to start working with (*The original table numeration from the database was maintained*):
+In total, we have data of these variables from 74 different countries since the year 1960.
 
-    Crude Oil data:
-    - Table 3.1 World proven crude oil reserves by country (mb).xlsx
-    - Table 5.6 World imports of crude oil by country (1,000 b/d)
-    - Table 4.7 World oil demand (downstream industry) by country (1,000 b/d)
-    - Table 7.2 Selected spot crude oil prices ($/b)
+Crude Oil dataset obtained from OPEC:
+- Table 3.1 World proven crude oil reserves by country (mb).xlsx 
+   - Renamed to: **fact_oil_reserves**
+- Table 3.5: World crude oil production by country (1,000 b/d)
+   - Renamed to: **fact_output** 
+- Table 4.7 World oil demand (downstream industry) by country (1,000 b/d)
+   - Renamed to: **fact_demand**
+- Table 7.2 Selected spot crude oil prices ($/b)
+   - Renamed to: **fact_price**
 
-At the time of writing, the datasets contain data from the year 1960 up to 2022. 
+
+### **IMPORTANT**: The data obtained is pre-aggregated data (AVERAGE or SUM in case of Reserves) recorded at the end of every year.
 
 
-Important Data Information:
+### 2.1 Data Information and Definitions:
 
-    Oil reserves are measured in million barrels (mb), and Spot Price in $US per barrel.
+ **IMPORTANT**: The data obtained is pre-aggregated data recorded at the end of every year. Working with this type of data has its limitations, including reduced granularity, which may not show short-term fluctuations and specific event-driven anomalies. Additionally, it can limit our ability to perform certain types of analyses, such as intra-year trends, daily or monthly comparisons, and detailed breakdowns by smaller time frames or categories. However, because we have a range of 60 years to work with, we can still gather many insights with this data. Long-term trends, cyclical patterns, and overall growth or decline are well captured, allowing us to analyze broad movements and changes over decades.
+
+   * **Oil reserves** are measured in **barrels (b)**. 
+   
+   * **Average Price**: the average price in that year in **$US per barrel (USD/b)**.
     
-    Demand and imports are given in 1000 barrels per day (average) and is recorded at the end of each year. In other words, the data given is the average number of barrels per day produced in that year. 
+   * **Demand, Output** values were calculated using DAX to be based the sum of **total barrels in that year (barrels per year, b/y)** instead of the reduced average of 1000 barrels per day (1000 b/d).
 
-    Volume of the barrel: 42 gallons (US) or 159 liters.
+   * Volume of the barrel for further calculations: 42 gallons (US) or 159 liters.
 
-Definitions:
 
-    Oil reserves denote discovered quantities of crude oil that can be profitably produced/recovered from an approved development. - Source: [Petroleum Resource Management System, SPE (2018)](https://www.spe.org/en/industry/petroleum-resources-management-system-2018/).
+### 2.2 Oil Market Information and Definitions:
 
-    Output: crude oil extracted, part of the upstream operations, same as crude oil Production.
+   * **Oil reserves** denote discovered quantities of crude oil that can be profitably produced/recovered from an approved development. - Source: [Petroleum Resource Management System, SPE (2018)](https://www.spe.org/en/industry/petroleum-resources-management-system-2018/).
 
-    Upstream: “Upstream operations include exploring new landscapes for oil potential, discovering the crude oil, drilling and extracting it, and the initial discovery part. Another name for the upstream oil sector is the exploration and production (E&P) sector.” - Investopedia.
+   * **Output**: crude oil extracted, part of the upstream operations, same as crude oil Production.
 
-    Downstream: refers to the process of taking crude oil and turning into various derivatives. Thus, refers to demand for raw material from refineries and others. Anything after this is said to be further downstream. - “The closer an oil and gas company is to the process of providing consumers with petroleum products, the further downstream the company is said to be.” - Investopedia.
+   * Upstream: “Upstream operations include exploring new landscapes for oil potential, discovering the crude oil, drilling and extracting it, and the initial discovery part. Another name for the upstream oil sector is the exploration and production (E&P) sector.” - Investopedia.
+
+   * Downstream: refers to the process of taking crude oil and turning into various derivatives. Anything after this is said to be further downstream. - “The closer an oil and gas company is to the process of providing consumers with petroleum products, the further downstream the company is said to be.” - Investopedia.
 
 
 ## 3. Objectives:
-    To have a macroeconomic view of the global market of crude oil over the last 40 to 50 years. 
-    For that we can begin by answering basic questions:
-    - Which countries have the largest oil reserves?
-    - Which countries have added or increased more their reserves over the years? And which have decreased the most?
-    - Which countries have have the largest demands for crude oil?
-    - Who imports the most crude oil?
+    
+To show a macroeconomic view of the global market of crude oil over the last 40 to 50 years and the current landscape.
+
+Project tasks: 
+Main Task: Create a cohesive story for this data. Find the correct scope for the project. For that we have still to:
+
+- Visualize the total reserves today, 1,5T barrels. create a cool visualization with this.
+
+- Estimate how long would 1,5T barrels last if demand stays the same. Can we then try to estimate this same timew but considering the average growth of the last years? 
+
+- Are reserves growing with demand in a reasonable pace? Which is growing faster?
+
+Other possible analysis to create:
+Trend Analysis with Moving Averages [DONE]
+Year-over-Year Growth Rates [DONE]
+Forecasting Future Values (maybe)
+Analysis of Extremes 
 
 
+
+
+Other Questions to answer:
+* Which countries have the largest oil reserves? [DONE]
+
+* Which countries have added or increased more their reserves over the years? And which have decreased the most? (cumulative growth)
+
+* Which countries have have the largest demands for crude oil? [DOONE]
+
+
+
+ 
 ## 4. Methodology:
 
-### 4.1 Importing, Data Preparation and Data Processing
+### 4.1 Data Preparation and Processing
 
-I imported the Excel files to Power BI, and I started using Power Query to prepare the data.
+I imported the Excel files to Power BI, and I started using Power Query to prepare the data. I transformed the data structure from a wide format, with years spread across columns, to a long format where years were un-pivoted into a single column. 
 
-First I transformed the data structure from a wide format, with years spread across columns, to a long format where years were un-pivoted into a single column. This facilitated subsequent analysis.
-
-Furthermore, the raw data included summaries of the each continents total, which could create redundancy in the analysis. Because of that, those records were filtered from the datasets. 
+Furthermore, the raw data included records of the each region's total, which created redundancy in the data. Those records were filtered from the datasets using Power Query. Afterwards, I create a [region] column in our data using a DAX function to assign all countries with the respective region.
 
 Basic cleaning was perfomed, assigning the correct formats, fixing typos and creating a naming convention for each column.
 
-I then noticed the tables had no unique identifiers, which could become a problem. To address this, I created a bridge table using a DAX funcion, which recorded all possible country-year combinations and assigned a unique identifier to each pair. <!-- This step enabled the creation of one-to-many relationships between this bridge table and all other, enabling us to connect the data while ensuring integrity and consistency in the analysis. -->
-With this part complete, we proceed to the analysis phase.
+### 4.2 Data Schema
+
+To create the data schema, two Dimensional Tables were created, one for [country] and the other for [year], and connected to all the other Fact Tables. 
+
+<img src="image.png" width="700">
+
+### 4.3 Measures
+
+### 4. Analysis
 
 
-### 4.2 Analysis
-
-<!-- 
-- Changes after inflexion points (mainly 2008 and 2019 for the financial crisis and COVID respectivelly).
-- Measures: mean, median, STD, Min, Max 
-- Correlation
-- % of total reserves belong too the top 5?
--->
 
 ## 5. Results :
 
@@ -96,9 +129,14 @@ Next, we take a look at the 5 countries that have the largest oil reserves. We s
 
 It is interesting to notice how much the reserves of Venezuela increased between the years 2005 and 2010, coming to the current position of largest reserves in the world. A jump larger than Saudi Arabia's over the years 1987 and 1988.
 
+It is worth noticing that approximately 66% of all reserves belong to these 5 countries, as of 2022. And looking at the industry demand for oil, we can see that these countries don't have a strong demand from industries for crude oil, so most of it is sold to other countries. 
+
+<img src="image-4.png" width="350"> <img src="image-5.png" width="350"> 
+
+
 ### 5.2 Demand for Crude Oil
 
-The second graph shows a very different context. Demand is greater in the most industrialized countries with big economies, as expected. These countries are mostly preocupied with keeping their industries running and oil is a big part of that. The 5 most demanding countries of Crude Oil are: USA, China, Japan, Russia and Germany.
+The demand graph shows a very different context. Demand is greater in the most industrialized countries with big economies, as expected. These countries are mostly preocupied with keeping their industries running and oil is a big part of that. The 5 most demanding countries of Crude Oil are: USA, China, Japan, Russia and Germany.
 
 As mentioned before, the measures in the Y axis (demand and imported) is the **average** of barrels in that year, per day. To get the actual quantity of demand or imported oil, you could simply multiply the average given by 365. For the purposes of this analysis, we don't need to do this multiplication.
 
