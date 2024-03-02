@@ -4,8 +4,6 @@
 In this project I use Power BI and to clean, transform,  and visualize data from the Petroleum Industry. 
 <!-- I chose to work with a dataset that was related to subjects that interest me, such as the commodities markets and the chemical industry. Considering pretoleum and it derivates are commodities of high interest and also debate over the years, I felt the crude oil market was a great choice.-->
 
-*Ultimately, this project's goal is to work on and demonstrate my skills as a Data Analyst.*
-
 ## 2. The Data
 
 The data was obtained from OPEC's (Organization of the Petroleum Exporting Countries) database, available from their [website](https://asb.opec.org/data/ASB_Data.php).
@@ -59,7 +57,7 @@ Crude Oil dataset obtained from OPEC:
 ## 3. Objectives:
     
 To show a macroeconomic view of the global market of crude oil over the last 40 to 50 years and the current landscape.
-
+<!-- 
 Project tasks: 
 Main Task: Create a cohesive story for this data. Find the correct scope for the project. For that we have still to:
 
@@ -68,26 +66,16 @@ Main Task: Create a cohesive story for this data. Find the correct scope for the
 - Estimate how long would 1,5T barrels last if demand stays the same. Can we then try to estimate this same timew but considering the average growth of the last years? 
 
 - Are reserves growing with demand in a reasonable pace? Which is growing faster?
-
-Other possible analysis to create:
 Trend Analysis with Moving Averages [DONE]
 Year-over-Year Growth Rates [DONE]
-Forecasting Future Values (maybe)
-Analysis of Extremes 
-
-
-
-
-Other Questions to answer:
 * Which countries have the largest oil reserves? [DONE]
 
-* Which countries have added or increased more their reserves over the years? And which have decreased the most? (cumulative growth)
+* Which countries have added or increased more their reserves over the years? And which have decreased the most? (cumulative growth) [DONE]
 
 * Which countries have have the largest demands for crude oil? [DOONE]
 
+-->
 
-
- 
 ## 4. Methodology:
 
 ### 4.1 Data Preparation and Processing
@@ -102,68 +90,52 @@ Basic cleaning was perfomed, assigning the correct formats, fixing typos and cre
 
 To create the data schema, two Dimensional Tables were created, one for [country] and the other for [year], and connected to all the other Fact Tables. 
 
-<img src="image.png" width="700">
-
-### 4.3 Measures
-
-### 4. Analysis
-
-
+<img src="image-9.png" width="700">
 
 ## 5. Results :
 
 ### 5.1 Oil Reserves
 
-It is known that a general concern of people when it comes to crude oil, other than the negative impact to the environment, is the fact that it is a finite source, meaning we can't create new crude oil, we can only extract what is available. That means it would likely be a bad idea to depend on something that might run out in the future.
-So, looking at how the total reserves of explorable oil have been behaving over the years, we can have an idea if that is something we should be worried about in the near future. 
+The general concern of people when it comes to crude oil, other than the negative impact to the environment, is the fact that it is a finite source, meaning we can't create new crude oil, we can only extract what is available.
+Looking at how the total reserves of explorable oil have been behaving over the years, we can have an idea if that is something we should be worried about in the near future. 
 
-<img src="image-3.png" width="500">
+<img src="image-1.png" width="500">
 
 From the image we can see that over time, even with the huge demand for this commodity in the world economy (see demand section below), we have been able to find and explore more oil then we have consumed. In fact, since 2019, we have reached a total of 1,5 Billion barrels in explorable reserves (1,5 million million barrels), the highest ever.
 
 That means that, it seems unlikely that we will be running out of this commodity any time soon, as this trend is expected to continue, as countries continue to look to increase their oil reserves and reduce the reliance from imported oil when possible.
 
-Next, we take a look at the 5 countries that have the largest oil reserves. We see these countries have been increasing their reserves consistently over the years, which means they are able too add to their reserves faster than are extracting or at the same rate. For these countries, the oil exploration is a major driver of their economy, and also a point of influence in global geopolitical scenarios. 
-
-<img src="image.png" width="700">
+Next, we take a look at the 6 countries that have the largest oil reserves. We see these countries have been increasing their reserves consistently over the years, which means they are able too add to their reserves faster than are extracting or at the same rate. For these countries, the oil exploration is a major driver of their economy, and also a point of influence in global geopolitical scenarios. 
+It is also worth pointing out that approximately 66% of all reserves belong to these 5 countries, as of 2022. 
+<img src="image-2.png" width="700">
 
 It is interesting to notice how much the reserves of Venezuela increased between the years 2005 and 2010, coming to the current position of largest reserves in the world. A jump larger than Saudi Arabia's over the years 1987 and 1988.
 
-It is worth noticing that approximately 66% of all reserves belong to these 5 countries, as of 2022. And looking at the industry demand for oil, we can see that these countries don't have a strong demand from industries for crude oil, so most of it is sold to other countries. 
-
-<img src="image-4.png" width="350"> <img src="image-5.png" width="350"> 
+<img src="image-3.png" width="700">
 
 
 ### 5.2 Demand for Crude Oil
 
 The demand graph shows a very different context. Demand is greater in the most industrialized countries with big economies, as expected. These countries are mostly preocupied with keeping their industries running and oil is a big part of that. The 5 most demanding countries of Crude Oil are: USA, China, Japan, Russia and Germany.
 
-As mentioned before, the measures in the Y axis (demand and imported) is the **average** of barrels in that year, per day. To get the actual quantity of demand or imported oil, you could simply multiply the average given by 365. For the purposes of this analysis, we don't need to do this multiplication.
-
-<img src="image-1.png" width="700">
+<img src="image-4.png" width="700">
 
 Looking at this graph, we can see the demand of the US for Oil has varied greatly over time. This in itself can be studied in depth as to why and how that has affected the USA economy and industry over time. These variations can be associated to internal policies or changes in geo politics, price (supply and demand), wars that the USA was involved over the years, and much more. 
 
 In contract if we look at Germany, we see a nation that has maintained the same level of demand for Crude Oil over time, indicating that Germany has taken measures to control or even reduce their dependence of Oil, considering the German industry is one the largest in the world. 
 
-### 5.3 Imports of Crude Oil
-
-In countries where there is not enough local oil reserves to sustain the local industry, they require to import the necessary oil to meet the industry demand. 
-This will give us an idea which countries are the most dependent on imported oil, and therefore, exposed to the international market, by having to depend and the major crude oil producers.  
-
-<img src="image-2.png" width="700">
+### Output (Production)
 
 
-### 5.4 Imported and Demand Correlation with Price
-
-Price of Crude Oil like most commodities will follow supply and demand of the market. Nonetheless, as we can see, the Global market for Oil is complex and changes in price will affect different economies in varied ways. Drawing correlation between price and other metrics will give us an idea of how each country might deal with price variance of crude oil over time. 
-
-As mentioned before, this is important because countries depend on large amount of oil to sustain their industrialized economy, and some countries are more dependent than other.
-
-On the other side, we have seen that supply is mainly dictated by 5 major Crude Oil producers (as of today): Venezuela, Saudi Arabia, Iran, Iraq and Kuwait. These countries are likely to be drivers of the price of Oil.
+<img src="image-6.png" width="700">
 
 
-### Country-Specific Analysis:
+### Demand, Output and Price
+<img src="image-7.png" width="700">
+
+<img src="image-8.png" width="700">
+
+
 
  <!-- Which countries have the most considerable crude oil reserves, and how does that compare with their global standing in terms of output and demand?
 
