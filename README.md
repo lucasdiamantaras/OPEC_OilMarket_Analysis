@@ -90,7 +90,7 @@ Basic cleaning was perfomed, assigning the correct formats, fixing typos and cre
 
 To create the data schema, two Dimensional Tables were created, one for [country] and the other for [year], and connected to all the other Fact Tables. 
 
-<img src="image-9.png" width="700">
+<img src="CrudeOil_Analysis/images/image-9.png" width="700">
 
 ## 5. Results :
 
@@ -99,7 +99,7 @@ To create the data schema, two Dimensional Tables were created, one for [country
 The general concern of people when it comes to crude oil, other than the negative impact to the environment, is the fact that it is a finite source, meaning we can't create new crude oil, we can only extract what is available.
 Looking at how the total reserves of explorable oil have been behaving over the years, we can have an idea if that is something we should be worried about in the near future. 
 
-<img src="image-1.png" width="500">
+<img src="CrudeOil_Analysis/images/image-1.png" width="600">
 
 From the image we can see that over time, even with the huge demand for this commodity in the world economy (see demand section below), we have been able to find and explore more oil then we have consumed. In fact, since 2019, we have reached a total of 1,5 Billion barrels in explorable reserves (1,5 million million barrels), the highest ever.
 
@@ -107,18 +107,18 @@ That means that, it seems unlikely that we will be running out of this commodity
 
 Next, we take a look at the 6 countries that have the largest oil reserves. We see these countries have been increasing their reserves consistently over the years, which means they are able too add to their reserves faster than are extracting or at the same rate. For these countries, the oil exploration is a major driver of their economy, and also a point of influence in global geopolitical scenarios. 
 It is also worth pointing out that approximately 66% of all reserves belong to these 5 countries, as of 2022. 
-<img src="image-2.png" width="700">
+<img src="CrudeOil_Analysis/images/image-2.png" width="600">
 
 It is interesting to notice how much the reserves of Venezuela increased between the years 2005 and 2010, coming to the current position of largest reserves in the world. A jump larger than Saudi Arabia's over the years 1987 and 1988.
 
-<img src="image-3.png" width="700">
+<img src="CrudeOil_Analysis/images/image-3.png" width="600">
 
 
 ### 5.2 Demand for Crude Oil
 
 The demand graph shows a very different context. Demand is greater in the most industrialized countries with big economies, as expected. These countries are mostly preocupied with keeping their industries running and oil is a big part of that. The 5 most demanding countries of Crude Oil are: USA, China, Japan, Russia and Germany.
 
-<img src="image-4.png" width="700">
+<img src="CrudeOil_Analysis/images/image-4.png" width="600">
 
 Looking at this graph, we can see the demand of the US for Oil has varied greatly over time. This in itself can be studied in depth as to why and how that has affected the USA economy and industry over time. These variations can be associated to internal policies or changes in geo politics, price (supply and demand), wars that the USA was involved over the years, and much more. 
 
@@ -127,13 +127,13 @@ In contract if we look at Germany, we see a nation that has maintained the same 
 ### Output (Production)
 
 
-<img src="image-6.png" width="700">
+<img src="CrudeOil_Analysis/images/image-6.png" width="600">
 
 
 ### Demand, Output and Price
-<img src="image-7.png" width="700">
+<img src="CrudeOil_Analysis/images/mage-7.png" width="600">
 
-<img src="image-8.png" width="700">
+<img src="CrudeOil_Analysis/images/image-8.png" width="600">
 
 
 
